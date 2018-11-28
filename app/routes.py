@@ -27,8 +27,6 @@ def count():
         fullwordlist = obo.stripNonAlphaNum(text)
         wordlist = obo.removeStopwords(fullwordlist, obo.stopwords)
         dictionary = obo.wordListToFreqDict(wordlist)
-        sorteddict = obo.sortFreqDict(dictionary)
-        for s in sorteddict[:21]:
-            flash(str(s))
-        return redirect(url_for('index'))
+        sorteddict = obo.sortFreqDict(dictionary)[:21]
+        return render_template('results.html', result=sorteddict)
     return render_template('count.html', title='Word Count Application', form=form)
