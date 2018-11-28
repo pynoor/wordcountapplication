@@ -4,7 +4,7 @@
 
 "Task Description
 The web application should show a simple input form with a text field for entering a web site URL. The input form must contain a button for sending the entered URL to the server for processing.
-On the server side, scrape the provided URL and extract the text of all paragraph (<p>) elements. Count the word occurrences and send the top 20 words including their frequencies back to client. On the client side, display these results in a simple table.
+On the server side, scrape the provided URL and extract the text of all paragraph (\<p>) elements. Count the word occurrences and send the top 20 words including their frequencies back to client. On the client side, display these results in a simple table.
 In case the URL is not valid, or you encounter any other error while scraping the web site, display a proper error message on the client, including the HTTP status code and a user-friendly error message.
 Provide a simple document where you describe how to build and run your solution. Also describe any decisions and assumptions you made while creating the solution."
 
