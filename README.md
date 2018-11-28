@@ -12,14 +12,16 @@ Provide a simple document where you describe how to build and run your solution.
 
 To run this code you'll first need to install all the packages mentioned in the requirements.txt file into your virtual environment.
 
-(To do this, run:
-$ pip3 install package
-from your terminal)
+To do this, run:
+
+    $ pip3 install package
+
+from your terminal
 
 You'll then need to run
 
-$ export FLASK_APP=wordcountapplication.py
-$ flask run
+    $ export FLASK_APP=wordcountapplication.py
+    $ flask run
 
 to run the application.
 
