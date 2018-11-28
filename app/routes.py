@@ -7,6 +7,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import WordForm
 import requests
+from requests.exceptions import MissingSchema
 import obo
 
 
@@ -21,7 +22,15 @@ def count():
     form = WordForm()
     if form.validate_on_submit():
         url = form.url.data
-        response = requests.get(url)
+        try:
+            response = requests.get(url)
+        except MissingSchema:
+            return render_template('error.html', error=
+            "Doesn't look like it!")
+        if response.status_code != 200:
+            return render_template('error.html', error="Your submission caused a " +
+            str(response.status_code) + " error.")
+
         html = response.content.decode("utf-8")
         text = obo.stripTags(html).lower()
         fullwordlist = obo.stripNonAlphaNum(text)
