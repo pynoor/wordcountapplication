@@ -1,3 +1,8 @@
+
+# In this file we're going to define the functions that will be
+# executed, depending on which url path is being requested.
+
+
 from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import WordForm
