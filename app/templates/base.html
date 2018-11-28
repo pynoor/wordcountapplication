@@ -7,7 +7,10 @@
         {% endif %}
     </head>
     <body>
-        <div> Word Count Application: <a href='/index'>Home</a> <a href='/count'>Word Count</a></div>
+        <div> Word Count Application:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('count') }}">Word Count</a>
+        </div>
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
