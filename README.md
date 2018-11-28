@@ -68,7 +68,11 @@ However, with more time in hand, I most likely wouldn't use this. I am sure (or 
 
 Well, I've tried my best completing the challenge, and even still there are parts missing. I'll be continuing to work on this project for the rest of the day (and night, probably) because I'm having fun with it, but since I've been given limited time, here is what I have so far :)
 
+## To do:
 
+- handle errors
+- fix table size
+- refactor web scraper
 
 ## Resources:
 
