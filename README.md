@@ -33,5 +33,5 @@ Now all you need to do is open up "localhost:5000" in your browser and you'll be
 
 ## Resources:
 
-https://programminghistorian.org/en/lessons/counting-frequencies
+https://programminghistorian.org/en/lessons/counting-frequencies <br>
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms
