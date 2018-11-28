@@ -3,12 +3,14 @@
 # executed, depending on which url path is being requested.
 
 
-from flask import render_template, flash, redirect, url_for
+import requests
+from bs4 import BeautifulSoup
+from flask import flash, redirect, render_template, url_for
+from requests.exceptions import MissingSchema
+
+import obo
 from app import app
 from app.forms import WordForm
-import requests
-from requests.exceptions import MissingSchema
-import obo
 
 
 @app.route('/')
@@ -30,10 +32,11 @@ def count():
         if response.status_code != 200:
             return render_template('error.html', error="Your submission caused a " +
             str(response.status_code) + " error.")
-
         html = response.content.decode("utf-8")
-        text = obo.stripTags(html).lower()
-        fullwordlist = obo.stripNonAlphaNum(text)
+        soup = BeautifulSoup(html, 'html.parser')
+        text_in_paragraphs = str(soup.find_all('p'))
+        text_within_paragraphs = obo.stripTags(text_in_paragraphs).lower()
+        fullwordlist = obo.stripNonAlphaNum(text_within_paragraphs)
         wordlist = obo.removeStopwords(fullwordlist, obo.stopwords)
         dictionary = obo.wordListToFreqDict(wordlist)
         sorteddict = obo.sortFreqDict(dictionary)[:21]
