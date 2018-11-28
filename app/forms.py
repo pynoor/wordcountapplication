@@ -3,5 +3,5 @@ from wtforms import BooleanField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 class WordForm(FlaskForm):
-    word = StringField('Word', validators=[DataRequired()])
-    submit = SubmitField('Count for me!')
+    url = StringField('URL', validators=[DataRequired()])
+    submit = SubmitField('Count words!')
