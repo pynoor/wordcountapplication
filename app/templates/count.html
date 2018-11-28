@@ -7,6 +7,9 @@
         <p>
             {{ form.word.label }}<br>
             {{ form.word(size=32) }}
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>{{ form.submit() }}</p>
     </form>
