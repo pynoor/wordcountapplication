@@ -64,7 +64,7 @@ I came across this website: https://programminghistorian.org/en/lessons/counting
 while trying to figure out how to do this and it seemed quite straight forward, with a few adjustments because I'm using Python3 instead of Python2.
 However, with more time in hand, I most likely wouldn't use this. I am sure (or hope) there are better ways to web scrape, but this is what I could find and kind of implement in time.
 
-### Conclusion:
+## Conclusion:
 
 Well, I've tried my best completing the challenge, and even still there are parts missing. I'll be continuing to work on this project for the rest of the day (and night, probably) because I'm having fun with it, but since I've been given limited time, here is what I have so far :)
 
