@@ -70,9 +70,7 @@ Well, I've tried my best completing the challenge, and even still there are part
 
 ## To do:
 
-- handle errors
-- fix table size
-- refactor web scraper
+- refactor obo - stripTags function
 
 ## Resources:
 
